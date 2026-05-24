@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -127,10 +127,351 @@
       color: var(--muted);
       border-top: 1px solid var(--border);
     }
+        .lang-switcher {
+      position: fixed;
+      right: 18px;
+      top: 18px;
+      z-index: 50;
+      display: flex;
+      gap: 8px;
+      padding: 8px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(17, 24, 39, .86);
+      backdrop-filter: blur(12px);
+    }
+
+    .lang-button {
+      border: 0;
+      border-radius: 999px;
+      padding: 7px 12px;
+      color: var(--muted);
+      background: transparent;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .lang-button.active {
+      color: #07111f;
+      background: var(--accent);
+    }
+
+    [data-lang-content] {
+      display: none;
+    }
+
+    [data-lang-content].active {
+      display: block;
+    }
   </style>
 </head>
 <body>
-  <header>
+  <div class="lang-switcher" aria-label="Language selector">
+    <button class="lang-button" type="button" data-set-lang="ja">日本語</button>
+    <button class="lang-button" type="button" data-set-lang="en">English</button>
+  </div>
+
+  <div data-lang-content="ja">
+      <header>
+    <div class="badge">OBS Misa Translator / License</div>
+    <body>
+  <div class="lang-switcher" aria-label="Language selector">
+    <button class="lang-button" type="button" data-set-lang="ja">日本語</button>
+    <button class="lang-button" type="button" data-set-lang="en">English</button>
+  </div>
+
+  <div data-lang-content="ja">
+    <header>
+      <div class="badge">OBS Misa Translator / ライセンス</div>
+
+```
+  <h1>ライセンスとクレジット</h1>
+
+  <p class="lead">
+    このページには OBS Misa Translator のライセンス草案および、
+    使用しているサードパーティソフトウェア・サービスに関する情報を掲載しています。
+    ご利用・配布前に内容をご確認ください。
+  </p>
+
+  <div class="toolbar">
+    <a class="button" href="index.html">READMEへ戻る</a>
+
+    <a class="button"
+       href="https://github.com/Magicalshooter/OBSMisaTranslator">
+      GitHub リポジトリ
+    </a>
+  </div>
+</header>
+
+<main>
+  <details open>
+    <summary>OBS Misa Translator ライセンス v0.1</summary>
+
+    <div class="details-body">
+```
+
+<pre>OBS Misa Translator License v0.1
+Copyright (c) 2025 Misa Kuroi
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 利用許可
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+本ソフトウェアは、正規に取得した本人のみ利用できます。
+
+以下の用途を許可します。
+
+- 個人利用
+- 商用利用（配信・イベント・業務利用など）
+- OBS / VRChat / 配信 / オンラインイベント等でのリアルタイム翻訳利用
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 本ソフトウェアについて
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+本ソフトウェアは OBS Misa Translator です。
+
+実行ファイル、インストーラ、更新ファイル、
+設定ファイル、同梱アセット、および関連データは、
+正規利用者本人のみ利用できます。
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 禁止事項
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+以下の行為を禁止します。
+
+- 本ソフトウェアの再配布（無償・有償を問わない）
+- 本ソフトウェアの転売
+- 本ソフトウェアの共有・貸与・譲渡
+- 未許可利用者が使用可能となる形での公開
+- 改造、解析、リバースエンジニアリング、逆コンパイル
+- ソースコードの再公開・再配布
+- ライセンスキー、更新URL、設定ファイル、認証情報、APIキー等の共有
+- 同梱アイコン・画像・音声素材等の単体流用
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ ライセンス失効
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+本ライセンスに違反した場合、
+利用権は自動的に失効します。
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 免責事項
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+本ソフトウェアは「現状のまま」提供されます。
+
+開発者は、本ソフトウェアの使用または使用不能によって発生した
+いかなる損害についても責任を負いません。
+
+これには以下を含みます。
+
+- データ損失
+- 業務停止
+- 利益損失
+- 直接的・間接的損害
+
+翻訳結果、音声認識結果、
+送信内容の正確性は保証されません。
+
+業務・法務・医療・安全・契約など重要用途では、
+必ず利用者自身で確認してください。
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 外部サービス
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+本ソフトウェアは翻訳・音声認識などのため、
+外部サービスやAPIを利用する場合があります。
+
+OpenAI API 等を利用する場合：
+
+- API利用料金は利用者負担です
+- APIキー管理は利用者責任です
+- サービス停止・制限は開発者責任外です
+
+外部サービス変更や停止による問題について、
+開発者は責任を負いません。
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ サードパーティソフトウェア
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+本ソフトウェアには、
+サードパーティ製ライブラリやソフトウェアが含まれます。
+
+それぞれのライセンス条件に従ってください。
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 開発者からの非法律メッセージ
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+以下は法的効力を持ちません。
+
+ただしライセンス違反を行うと、
+不思議な現象が起こる可能性があります。
+
+- アプリ内の妖精のやる気が下がる
+- トイレが近くなる
+- 調味料のフタが突然外れる
+- 家具に膝をぶつけやすくなる
+- 帰宅時に鍵が見つかりにくくなる
+- コンロを消したか急に不安になる
+- 大事な作業中にくしゃみが出る
+
+信じるかどうかはあなた次第です。</pre>
+
+```
+    </div>
+  </details>
+
+  <details>
+    <summary>サードパーティソフトウェア & サービス</summary>
+
+    <div class="details-body">
+      <p>
+        OBS Misa Translator は、
+        以下のサードパーティソフトウェア・API・サービス等を
+        利用または連携する場合があります。
+      </p>
+
+      <ul>
+        <li>OpenAI API</li>
+        <li>faster-whisper</li>
+        <li>CTranslate2</li>
+        <li>PySide6 / Qt components</li>
+        <li>VOICEVOX</li>
+        <li>OBS Studio</li>
+        <li>OneComme</li>
+        <li>Noto Sans Fonts</li>
+      </ul>
+
+      <div class="notice">
+        このセクションはクレジットおよび告知用です。
+        正式公開前に各ライセンス本文・リンクを確認してください。
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>フォントクレジット</summary>
+
+    <div class="details-body">
+      <p>
+        多言語字幕表示のため、
+        以下のフォントを利用または推奨する場合があります。
+      </p>
+
+      <ul>
+        <li>Noto Sans JP — 日本語</li>
+        <li>Noto Sans KR — 韓国語</li>
+        <li>Noto Sans SC — 中国語（簡体字）</li>
+        <li>Noto Sans TC — 中国語（繁体字）</li>
+        <li>Noto Sans Thai — タイ語</li>
+        <li>Noto Sans Mono — 英数字・記号・等幅表示</li>
+      </ul>
+
+      <p>各フォントのライセンス条件に従って利用してください。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>重要事項</summary>
+
+    <div class="details-body">
+      <ul>
+        <li>このページは GitHub Pages 公開用ドラフトです。</li>
+        <li>法的助言ではありません。</li>
+        <li>公開前に第三者ライセンスを必ず確認してください。</li>
+        <li>APIキーや秘密設定ファイルを公開しないでください。</li>
+      </ul>
+    </div>
+  </details>
+</main>
+
+<footer>
+  OBS Misa Translator ライセンスドラフト / Last updated: 2025
+</footer>
+```
+
+  </div>
+
+  <div data-lang-content="en">
+    <!-- ここに現在の英語版全文をそのまま入れる -->
+  </div>
+
+  <script>
+    const SUPPORTED_LANGS = ["ja", "en"];
+    const STORAGE_KEY = "obsmt_site_language";
+
+    function browserLanguage() {
+      const langs = navigator.languages && navigator.languages.length
+        ? navigator.languages
+        : [navigator.language || "ja"];
+
+      const joined = langs.join(" ").toLowerCase();
+
+      if (joined.includes("ja")) return "ja";
+
+      return "en";
+    }
+
+    function currentLanguage() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+
+      if (SUPPORTED_LANGS.includes(saved)) return saved;
+
+      return browserLanguage();
+    }
+
+    function setLanguage(lang, persist = true) {
+      const selected = SUPPORTED_LANGS.includes(lang)
+        ? lang
+        : "ja";
+
+      document.documentElement.lang = selected;
+
+      document.querySelectorAll("[data-lang-content]").forEach((element) => {
+        element.classList.toggle(
+          "active",
+          element.dataset.langContent === selected
+        );
+      });
+
+      document.querySelectorAll("[data-set-lang]").forEach((button) => {
+        button.classList.toggle(
+          "active",
+          button.dataset.setLang === selected
+        );
+
+        button.setAttribute(
+          "aria-pressed",
+          button.dataset.setLang === selected ? "true" : "false"
+        );
+      });
+
+      if (persist) {
+        localStorage.setItem(STORAGE_KEY, selected);
+      }
+    }
+
+    document.querySelectorAll("[data-set-lang]").forEach((button) => {
+      button.addEventListener("click", () => {
+        setLanguage(button.dataset.setLang);
+      });
+    });
+
+    setLanguage(currentLanguage(), false);
+  </script>
+
+</body>
+   
+  </div>
+
+  <div data-lang-content="en">
+      <header>
     <div class="badge">OBS Misa Translator / License</div>
     <h1>License & Credits</h1>
     <p class="lead">This page contains the OBS Misa Translator license draft and third-party notices. Please review the terms before using or distributing the software.</p>
@@ -300,5 +641,66 @@ Whether you believe this or not is entirely up to you.</pre>
   <footer>
     OBS Misa Translator License draft. Last updated: 2025.
   </footer>
+  </div>
+
+  <script>
+    const SUPPORTED_LANGS = ["ja", "en"];
+    const STORAGE_KEY = "obsmt_site_language";
+
+    function browserLanguage() {
+      const langs = navigator.languages && navigator.languages.length
+        ? navigator.languages
+        : [navigator.language || "ja"];
+      const joined = langs.join(" ").toLowerCase();
+      if (joined.includes("ja")) return "ja";
+      return "en";
+    }
+
+    function currentLanguage() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (SUPPORTED_LANGS.includes(saved)) return saved;
+      return browserLanguage();
+    }
+
+    function setLanguage(lang, persist = true) {
+      const selected = SUPPORTED_LANGS.includes(lang) ? lang : "ja";
+      document.documentElement.lang = selected;
+
+      document.querySelectorAll("[data-lang-content]").forEach((element) => {
+        element.classList.toggle("active", element.dataset.langContent === selected);
+      });
+
+      document.querySelectorAll("[data-set-lang]").forEach((button) => {
+        button.classList.toggle("active", button.dataset.setLang === selected);
+        button.setAttribute("aria-pressed", button.dataset.setLang === selected ? "true" : "false");
+      });
+
+      if (persist) localStorage.setItem(STORAGE_KEY, selected);
+    }
+
+    document.querySelectorAll("[data-set-lang]").forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.dataset.setLang));
+    });
+
+    setLanguage(currentLanguage(), false);
+  </script>
+</body>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body>
+
 </body>
 </html>
