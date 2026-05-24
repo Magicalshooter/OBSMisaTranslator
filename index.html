@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OBS Misa Translator README</title>
+  <style>
+    :root {
+      --bg: #111827;
+      --panel: #1f2937;
+      --panel-2: #253244;
+      --text: #f9fafb;
+      --muted: #cbd5e1;
+      --accent: #60a5fa;
+      --accent-2: #f9a8d4;
+      --border: rgba(255,255,255,.12);
+      --code: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Yu Gothic UI", "Meiryo", "Noto Sans JP", system-ui, sans-serif;
+      background: radial-gradient(circle at top left, rgba(96,165,250,.22), transparent 32rem), var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header {
+      padding: 72px 24px 48px;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    .badge {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255,255,255,.05);
+      font-size: 14px;
+    }
+    h1 {
+      margin: 20px 0 8px;
+      font-size: clamp(36px, 6vw, 68px);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+    .lead {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: clamp(17px, 2.4vw, 22px);
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--accent);
+      color: #07111f;
+      font-weight: 700;
+    }
+    .button.secondary {
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+    }
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px 72px;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(12px);
+      background: rgba(17, 24, 39, .82);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 10px 24px;
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    section { margin-top: 34px; }
+    h2 {
+      font-size: 28px;
+      margin: 0 0 14px;
+      letter-spacing: -0.02em;
+    }
+    h3 { margin: 22px 0 8px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.035));
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 18px 48px rgba(0,0,0,.22);
+    }
+    .card strong { color: #fff; }
+    .muted { color: var(--muted); }
+    ul { padding-left: 1.2em; }
+    li { margin: 4px 0; }
+    code, pre {
+      font-family: Consolas, "Cascadia Mono", monospace;
+      background: var(--code);
+      color: #e5e7eb;
+      border-radius: 10px;
+    }
+    code { padding: 2px 6px; }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--border);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(255,255,255,.04);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    th, td {
+      border-bottom: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: rgba(255,255,255,.07); }
+    .notice {
+      border-left: 4px solid var(--accent-2);
+      background: rgba(249,168,212,.08);
+      padding: 14px 16px;
+      border-radius: 12px;
+      color: var(--muted);
+    }
+    footer {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+    @media (max-width: 820px) {
+      .grid, .grid.two { grid-template-columns: 1fr; }
+      header { padding-top: 48px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="badge">OBS Misa Translator v0.5.116 / README draft</div>
+    <h1>配信者向けリアルタイム字幕・コメント翻訳ツール</h1>
+    <p class="lead">OBS Misa Translator は、マイク音声の文字起こし・翻訳字幕、コメント翻訳、OBS Text Source / Browser Source 出力をまとめて扱う配信支援ツールです。</p>
+    <div class="hero-actions">
+      <a class="button" href="#quick-start">クイックスタート</a>
+      <a class="button secondary" href="#obs-setup">OBS設定を見る</a>
+      <a class="button secondary" href="#notes">注意事項</a>
+    </div>
+  </header>
+
+  <nav>
+    <div class="inner">
+      <a href="#features">機能</a>
+      <a href="#quick-start">導入</a>
+      <a href="#obs-setup">OBS設定</a>
+      <a href="#comments">コメント</a>
+      <a href="#privacy">保存方針</a>
+      <a href="#editions">エディション</a>
+      <a href="#changelog">更新履歴</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="features">
+      <h2>主な機能</h2>
+      <div class="grid">
+        <div class="card"><strong>リアルタイム字幕</strong><br><span class="muted">faster-whisper による音声認識と、翻訳字幕のOBS出力。</span></div>
+        <div class="card"><strong>字幕HTML演出</strong><br><span class="muted">字幕00〜04を個別のBrowser Sourceとして表示。フェード、ポップ、タイプライター風など。</span></div>
+        <div class="card"><strong>コメント翻訳</strong><br><span class="muted">YouTube / Twitch / わんコメ連携を想定したコメント取得・翻訳・表示。</span></div>
+        <div class="card"><strong>CSSデザイン</strong><br><span class="muted">コメント・字幕のフォント、色、背景、枠、影、行間、表示位置を調整。</span></div>
+        <div class="card"><strong>GPU対応</strong><br><span class="muted">CUDA環境が利用可能な場合、GPUで高速な文字起こしが可能。</span></div>
+        <div class="card"><strong>保存最小化</strong><br><span class="muted">コメント本文の永続保存を避け、リアルタイム表示・翻訳に寄せた設計。</span></div>
+      </div>
+    </section>
+
+    <section id="usage-guide">
+      <h2>使用ガイド</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>基本的な流れ</h3>
+          <ol>
+            <li>マイクを選択</li>
+            <li>音声認識モデルを選択</li>
+            <li>CPU / GPU を選択</li>
+            <li>翻訳先言語を選択</li>
+            <li>「字幕翻訳開始」を押す</li>
+          </ol>
+          <p class="muted">翻訳結果は OBS Text Source または Browser Source へ出力されます。</p>
+        </div>
+        <div class="card">
+          <h3>おすすめ初期設定</h3>
+          <ul>
+            <li>GPU環境あり: <code>large-v3-turbo + GPU</code></li>
+            <li>軽量環境: <code>small / medium + CPU</code></li>
+            <li>翻訳先: English</li>
+            <li>字幕HTML演出: Fade または Pop</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid" style="margin-top:16px">
+        <div class="card">
+          <h3>字幕TEXTソース設定</h3>
+          <ul>
+            <li>自動消去秒数</li>
+            <li>1行文字数</li>
+            <li>最大行数</li>
+            <li>途中送信</li>
+          </ul>
+          <p class="muted">OBS Text Source向けの字幕整形設定です。</p>
+        </div>
+
+        <div class="card">
+          <h3>字幕ブラウザソース設定</h3>
+          <ul>
+            <li>フォント / サイズ</li>
+            <li>文字色 / 背景色 / 枠色</li>
+            <li>影 / 縁取り / 角丸</li>
+            <li>CSSテンプレ / アニメーション</li>
+          </ul>
+          <p class="muted">Browser Source字幕の見た目を調整できます。</p>
+        </div>
+
+        <div class="card">
+          <h3>ブラックリスト / セーフリスト</h3>
+          <ul>
+            <li>ブラックリスト: 除外したい語句</li>
+            <li>セーフリスト: 除外を上書きして通す語句</li>
+          </ul>
+          <p class="muted">セーフリストはブラックリストより優先されます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="quick-start">
+      <h2>クイックスタート</h2>
+      <div class="card">
+        <ol>
+          <li>Python環境と必要ライブラリを準備します。</li>
+          <li>仮想環境 <code>venv_obsmt</code> を有効化します。</li>
+          <li><code>OBS_Misa_Translator_v0_5_116.py</code> を起動します。</li>
+          <li>マイク、音声認識モデル、CPU/GPU、翻訳先言語を設定します。</li>
+          <li>OBS側へ <code>txt</code> または <code>HTML</code> の出力先を登録します。</li>
+        </ol>
+        <pre><code>cd /d D:\WorkFolder\OBSMisaTranslator
+venv_obsmt\Scripts\activate
+python OBS_Misa_Translator_v0_5_116.py</code></pre>
+      </div>
+    </section>
+
+    <section id="obs-setup">
+      <h2>OBS設定</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>Text Source</h3>
+          <p class="muted">OBSのテキストソースで、各 <code>obs_subtitle_00.txt</code>〜<code>obs_subtitle_04.txt</code> を読み込みます。</p>
+          <ul>
+            <li>字幕00: 認識結果</li>
+            <li>字幕01: 翻訳結果</li>
+            <li>字幕02〜04: 追加翻訳字幕</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Browser Source</h3>
+          <p class="muted">字幕HTMLを使う場合は、OBS Browser Sourceに専用HTMLを登録します。</p>
+          <pre><code>subtitle_overlay_00.html
+subtitle_overlay_01.html
+subtitle_overlay_02.html
+subtitle_overlay_03.html
+subtitle_overlay_04.html</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="comments">
+      <h2>コメント機能</h2>
+      <div class="card">
+        <p>コメント取得・翻訳・OBS表示を行います。コメント本文や投稿者名を外部に永続保存しない方針へ寄せています。</p>
+        <h3>わんコメ連携案</h3>
+        <ul>
+          <li>初期実装候補: 翻訳をBOTコメントとして新規投稿</li>
+          <li>将来候補: コメントID一致による既存コメント更新</li>
+          <li>注意: 更新時はWordPartyが発火しない場合があります。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="privacy">
+      <h2>データ保存方針</h2>
+      <div class="notice">
+        コメント本文・投稿者名などのプラットフォーム由来データは、原則としてOBSMT側で永続保存しない方針です。表示・翻訳・読み上げなど配信中の一時処理を中心に扱います。
+      </div>
+      <div class="grid two" style="margin-top:16px">
+        <div class="card"><strong>保存しない方針</strong><ul><li>コメント本文ログ</li><li>投稿者ごとの長期履歴</li><li>外部DB/クラウド保存</li></ul></div>
+        <div class="card"><strong>一時利用</strong><ul><li>OBS表示用txt/js/html</li><li>配信中メモリ</li><li>本文を含まない集計データ</li></ul></div>
+      </div>
+    </section>
+
+    <section id="editions">
+      <h2>エディション案</h2>
+      <table>
+        <thead><tr><th>項目</th><th>Free案</th><th>Full案</th></tr></thead>
+        <tbody>
+          <tr><td>処理</td><td>CPUのみ</td><td>CPU/GPU</td></tr>
+          <tr><td>字幕</td><td>字幕00/01中心</td><td>字幕00〜04</td></tr>
+          <tr><td>翻訳先</td><td>英語中心</td><td>多言語</td></tr>
+          <tr><td>コメント翻訳</td><td>制限またはなし</td><td>利用可能</td></tr>
+          <tr><td>HTML演出</td><td>基本演出</td><td>全演出・詳細CSS</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="changelog">
+      <h2>更新履歴 draft</h2>
+      <div class="card">
+        <h3>v0.5.116</h3>
+        <ul>
+          <li>字幕HTML 00〜04の専用HTML/JS出力を追加</li>
+          <li>字幕ブラウザソース設定ウィンドウを追加</li>
+          <li>字幕TEXTソース設定ウィンドウを追加</li>
+          <li>GPU CUDA DLL探索パス登録を補強</li>
+          <li>コメント本文の永続保存を停止する方針へ整理</li>
+          <li>セーフリストを追加し、ブラックリストより優先</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="notes">
+      <h2>注意事項</h2>
+      <div class="card">
+        <ul>
+          <li>GPU利用にはCUDA/cuDNN/ctranslate2周辺の環境が必要です。</li>
+          <li>OpenAI APIキーを設定する場合、画面共有やログ貼り付けで漏洩しないよう注意してください。</li>
+          <li>コメント取得元や配信プラットフォームの規約を確認して利用してください。</li>
+          <li>本READMEは作業中のドラフトです。正式配布前にライセンス表記と依存ライブラリ表記を整理してください。</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    OBS Misa Translator README draft. 本ページは配布前の説明サイトたたき台です。
+  </footer>
+</body>
+</html>
