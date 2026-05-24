@@ -196,6 +196,40 @@
       .grid, .grid.two { grid-template-columns: 1fr; }
       header { padding-top: 48px; }
     }
+    .preview-category {
+  margin-top: 42px;
+}
+
+.preview-category h3 {
+  margin-bottom: 18px;
+  font-size: 1.2rem;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.preview-grid figure {
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255,255,255,.04);
+  box-shadow: 0 12px 40px rgba(0,0,0,.22);
+}
+
+.preview-grid img {
+  width: 100%;
+  display: block;
+}
+
+.preview-grid figcaption {
+  padding: 12px 14px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
   </style>
 </head>
 <body>
@@ -252,6 +286,79 @@
       </div>
     </section>
 
+<section id="preview" class="section">
+  <div class="section-header">
+    <h2>Screenshots / Preview</h2>
+
+    <p>
+      OBS Misa Translator のUI・字幕・OBS設定画面のサンプルです。
+    </p>
+  </div>
+
+  <div class="preview-category">
+    <h3>Main Application</h3>
+
+    <div class="preview-grid">
+      <figure>
+        <img src="settings-window.png" alt="Settings Window">
+        <figcaption>Settings Window</figcaption>
+      </figure>
+
+      <figure>
+        <img src="translation-window.png" alt="Translation Window">
+        <figcaption>Translation Window</figcaption>
+      </figure>
+
+      <figure>
+        <img src="comments-window.png" alt="Comments Window">
+        <figcaption>Comments Window</figcaption>
+      </figure>
+
+      <figure>
+        <img src="tts-dictionary.png" alt="TTS Dictionary">
+        <figcaption>TTS Dictionary</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="preview-category">
+    <h3>OBS Setup</h3>
+
+    <div class="preview-grid">
+      <figure>
+        <img src="subtitle-text-source-settings.png" alt="Subtitle Text Source Settings">
+        <figcaption>Subtitle Text Source Settings</figcaption>
+      </figure>
+
+      <figure>
+        <img src="subtitle-browser-source-settings.png" alt="Subtitle Browser Source Settings">
+        <figcaption>Subtitle Browser Source Settings</figcaption>
+      </figure>
+
+      <figure>
+        <img src="comment-text-source-settings.png" alt="Comment Text Source Settings">
+        <figcaption>Comment Text Source Settings</figcaption>
+      </figure>
+
+      <figure>
+        <img src="comment-browser-source-settings.png" alt="Comment Browser Source Settings">
+        <figcaption>Comment Browser Source Settings</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="preview-category">
+    <h3>Overlay Examples</h3>
+
+    <div class="preview-grid">
+      <figure>
+        <img src="custom-emoji-subtitles.png" alt="Custom Emoji Subtitles">
+        <figcaption>Custom Emoji Subtitles</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+    
     <section id="usage-guide">
       <h2>使用ガイド</h2>
       <div class="grid two">
