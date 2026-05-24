@@ -5,6 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OBS Misa Translator README</title>
   <style>
+    .lang-switcher {
+      position: fixed;
+      right: 18px;
+      top: 18px;
+      z-index: 50;
+      display: flex;
+      gap: 8px;
+      padding: 8px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(17, 24, 39, .86);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 12px 36px rgba(0,0,0,.24);
+    }
+    .lang-button {
+      border: 0;
+      border-radius: 999px;
+      padding: 7px 12px;
+      color: var(--muted);
+      background: transparent;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .lang-button.active {
+      color: #07111f;
+      background: var(--accent);
+    }
+    [data-lang-content] { display: none; }
+    [data-lang-content].active { display: block; }
     :root {
       --bg: #111827;
       --panel: #1f2937;
@@ -170,7 +199,11 @@
   </style>
 </head>
 <body>
-  <header>
+  <div class="lang-switcher" aria-label="Language selector">
+    <button class="lang-button" type="button" data-set-lang="ja">日本語</button>
+    <button class="lang-button" type="button" data-set-lang="en">English</button>
+  </div>
+  <header data-lang-content="ja">
     <div class="badge">OBS Misa Translator v0.5.116 / README draft</div>
     <h1>配信者向けリアルタイム字幕・コメント翻訳ツール</h1>
     <p class="lead">OBS Misa Translator は、マイク音声の文字起こし・翻訳字幕、コメント翻訳、OBS Text Source / Browser Source 出力をまとめて扱う配信支援ツールです。</p>
@@ -178,6 +211,17 @@
       <a class="button" href="#quick-start">クイックスタート</a>
       <a class="button secondary" href="#obs-setup">OBS設定を見る</a>
       <a class="button secondary" href="#notes">注意事項</a>
+    </div>
+  </header>
+
+  <header data-lang-content="en">
+    <div class="badge">OBS Misa Translator v0.5.116 / README draft</div>
+    <h1>Real-time subtitles and comment translation for streamers</h1>
+    <p class="lead">OBS Misa Translator helps streamers handle microphone transcription, translated subtitles, comment translation, and OBS Text Source / Browser Source output.</p>
+    <div class="hero-actions">
+      <a class="button" href="#quick-start">Quick start</a>
+      <a class="button secondary" href="#obs-setup">OBS setup</a>
+      <a class="button secondary" href="#notes">Notes</a>
     </div>
   </header>
 
@@ -374,5 +418,41 @@ subtitle_overlay_04.html</code></pre>
   <footer>
     OBS Misa Translator README draft. 本ページは配布前の説明サイトたたき台です。
   </footer>
+  <script>
+    const SUPPORTED_LANGS = ["ja", "en"];
+    const STORAGE_KEY = "obsmt_site_language";
+
+    function browserLanguage() {
+      const langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "ja"];
+      const joined = langs.join(" ").toLowerCase();
+      if (joined.includes("ja")) return "ja";
+      return "en";
+    }
+
+    function currentLanguage() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (SUPPORTED_LANGS.includes(saved)) return saved;
+      return browserLanguage();
+    }
+
+    function setLanguage(lang, persist = true) {
+      const selected = SUPPORTED_LANGS.includes(lang) ? lang : "ja";
+      document.documentElement.lang = selected === "ja" ? "ja" : "en";
+      document.querySelectorAll("[data-lang-content]").forEach((element) => {
+        element.classList.toggle("active", element.dataset.langContent === selected);
+      });
+      document.querySelectorAll("[data-set-lang]").forEach((button) => {
+        button.classList.toggle("active", button.dataset.setLang === selected);
+        button.setAttribute("aria-pressed", button.dataset.setLang === selected ? "true" : "false");
+      });
+      if (persist) localStorage.setItem(STORAGE_KEY, selected);
+    }
+
+    document.querySelectorAll("[data-set-lang]").forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.dataset.setLang));
+    });
+
+    setLanguage(currentLanguage(), false);
+  </script>
 </body>
 </html>
