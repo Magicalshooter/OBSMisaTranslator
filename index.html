@@ -418,21 +418,54 @@
       </div>
     </section>
 
-    <section id="quick-start">
-      <h2>クイックスタート</h2>
-      <div class="card">
-        <ol>
-          <li>Python環境と必要ライブラリを準備します。</li>
-          <li>仮想環境 <code>venv_obsmt</code> を有効化します。</li>
-          <li><code>OBS_Misa_Translator_v0_5_116.py</code> を起動します。</li>
-          <li>マイク、音声認識モデル、CPU/GPU、翻訳先言語を設定します。</li>
-          <li>OBS側へ <code>txt</code> または <code>HTML</code> の出力先を登録します。</li>
-        </ol>
-        <pre><code>cd /d D:\WorkFolder\OBSMisaTranslator
-venv_obsmt\Scripts\activate
-python OBS_Misa_Translator_v0_5_116.py</code></pre>
-      </div>
-    </section>
+<section id="quick-start">
+  <h2>クイックスタート / Installation</h2>
+
+  <div class="grid two">
+    <div class="card">
+      <h3>1. Downloader を起動</h3>
+
+      <ol>
+        <li>Booth または配布ページから <code>OBS Misa Translator Downloader.exe</code> をダウンロードします。</li>
+        <li>Downloader を起動します。</li>
+        <li>「Download / Install」を押します。</li>
+      </ol>
+
+      <p class="muted">
+        Downloader は最新版を自動取得し、installer を起動します。
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>2. Installer を実行</h3>
+
+      <ol>
+        <li>ライセンスを確認します。</li>
+        <li>インストール先を選択します。</li>
+        <li>Install を押します。</li>
+      </ol>
+
+      <p class="muted">
+        初回起動時は Windows Defender の確認が出る場合があります。
+      </p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>3. OBS Misa Translator を起動</h3>
+
+    <ol>
+      <li>マイクを選択</li>
+      <li>Whisperモデルを選択</li>
+      <li>翻訳先言語を選択</li>
+      <li>「字幕翻訳開始」を押します</li>
+    </ol>
+
+    <p class="muted">
+      更新はヘッダーの「更新」ボタンから行えます。
+    </p>
+  </div>
+</section>
 
     <section id="obs-setup">
       <h2>OBS設定</h2>
