@@ -467,6 +467,30 @@
   </div>
 </section>
 
+    <section id="models">
+  <h2>Whisper モデル管理</h2>
+
+  <div class="card">
+    <p>
+      OBS Misa Translator は faster-whisper モデルを利用します。
+    </p>
+
+    <ul>
+      <li>small: 軽量</li>
+      <li>medium: バランス型</li>
+      <li>large-v3-turbo: 高品質</li>
+    </ul>
+
+    <p>
+      モデル管理画面から不要モデルを削除できます。
+    </p>
+
+    <p class="muted">
+      Whisper モデルは数GBになる場合があります。
+    </p>
+  </div>
+</section>
+
     <section id="obs-setup">
       <h2>OBS設定</h2>
       <div class="grid two">
@@ -504,6 +528,23 @@ subtitle_overlay_04.html</code></pre>
       </div>
     </section>
 
+    <section id="updates">
+  <h2>アップデート</h2>
+
+  <div class="card">
+    <p>
+      OBS Misa Translator は自動更新確認に対応しています。
+    </p>
+
+    <ul>
+      <li>起動時に最新版確認</li>
+      <li>ヘッダー「更新」ボタン通知</li>
+      <li>installer自動ダウンロード</li>
+      <li>SHA256検証対応</li>
+    </ul>
+  </div>
+</section>
+
     <section id="privacy">
       <h2>データ保存方針</h2>
       <div class="notice">
@@ -528,7 +569,41 @@ subtitle_overlay_04.html</code></pre>
         </tbody>
       </table>
     </section>
+    
+<section id="faq">
+  <h2>FAQ / よくある質問</h2>
 
+  <div class="grid two">
+    <div class="card">
+      <h3>Q. 初回起動が遅いです</h3>
+      <p>
+        初回は Whisper モデルの準備やフォント展開を行うため、通常より時間がかかる場合があります。
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Q. GPUが使われません</h3>
+      <p>
+        CUDA / cuDNN / NVIDIA Driver が正しく導入されているか確認してください。
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Q. Windows Defender が警告を出します</h3>
+      <p>
+        初回配布直後のアプリでは SmartScreen 警告が表示される場合があります。
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Q. コメントが取得できません</h3>
+      <p>
+        配信URL、YouTube Live状態、コメント取得設定を確認してください。
+      </p>
+    </div>
+  </div>
+</section>
+    
     <section id="changelog">
       <h2>更新履歴 draft</h2>
       <div class="card">
