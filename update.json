@@ -1,0 +1,8 @@
+{
+  "version": "v0.5.116",
+  "latest_version": "v0.5.116",
+  "installer_url": "https://github.com/Magicalshooter/OBSMisaTranslator/releases/download/v0.5.116/OBS_Misa_Translator_Setup_v0_5_116.exe",
+  "download_url": "https://magicalshooter.github.io/OBSMisaTranslator/Updates.html",
+  "sha256": "ここにSHA256",
+  "release_notes": "v0.5.116: Initial public release with update system, license activation, multilingual subtitle font support, and Whisper model management."
+}
