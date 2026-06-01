@@ -3,6 +3,6 @@
   "latest_version": "v0.5.117",
   "installer_url": "https://github.com/Magicalshooter/OBSMisaTranslator/releases/download/v0.5.117/OBS_Misa_Translator_Setup_v0_5_117.exe",
   "download_url": "https://magicalshooter.github.io/OBSMisaTranslator/Updates.html",
-  "sha256": "49dca67e1c82960570f1d97b8ca7e699d22436ab6888d3179854b9fcc91e793f",
+  "sha256": "83f20d79ee27ae36a9548097120d28843da4a6611841af3d86d0822b3fe336c0",
   "release_notes": "v0.5.117\n\n・MIC LEVELメーターを追加（開始前プレビュー対応）\n・WhisperモデルDL進捗表示を追加\n・モデルDL失敗/未完了判定を改善\n・コメント接続UIを整理\n・コメント表示件数設定を復活\n・コメント左右配置切替を追加\n・対応言語を24言語へ拡張\n・各種UI改善と不具合修正"
 }
