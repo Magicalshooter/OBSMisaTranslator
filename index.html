@@ -263,12 +263,10 @@
   </style>
 </head>
 <body>
-  <!--
   <div class="lang-switcher" aria-label="Language selector">
     <button class="lang-button" type="button" data-set-lang="ja">日本語</button>
     <button class="lang-button" type="button" data-set-lang="en">English</button>
   </div>
-  -->
   <header data-lang-content="ja">
     <div class="badge">OBS Misa Translator v0.5.117</div>
     <h1>配信者向け<br>
@@ -295,7 +293,32 @@
     
   </header>
 
-  <nav>
+  <header data-lang-content="en">
+    <div class="badge">OBS Misa Translator v0.5.117</div>
+    <h1>Real-time captions and comment translation<br>
+      for streamers</h1>
+    <p class="hero-subtitle">
+      faster-whisper / OBS Browser Source / Multi Language Translation
+    </p>
+    <p class="lead">
+      OBS Misa Translator helps streamers handle speech recognition,
+      translated captions, comment translation, and OBS Text Source /
+      Browser Source output in one desktop tool.
+    </p>
+
+    <div class="hero-actions">
+      <a class="button" href="https://magicalshooter.booth.pm" target="_blank">📥 Booth (Japan)</a>
+      <a class="button" href="https://magicalshooter.itch.io" target="_blank">🌎 itch.io (Global)</a>
+      <a class="button secondary" href="License.html">License</a>
+      <a class="button secondary" href="https://x.com/Magical_Shooter" target="_blank">X.com</a>
+      <a class="button secondary" href="https://github.com/Magicalshooter/misa-support/issues/new/choose"
+        target="_blank">
+        🐞 Bug Report / Feature Request
+      </a>
+    </div>
+  </header>
+
+  <nav data-lang-content="ja">
     <div class="inner">
       <a href="#features">機能</a>
       <a href="#quick-start">クイックスタート</a>
@@ -308,7 +331,20 @@
     </div>
   </nav>
 
-  <main>
+  <nav data-lang-content="en">
+    <div class="inner">
+      <a href="#features-en">Features</a>
+      <a href="#quick-start-en">Quick Start</a>
+      <a href="#installation-en">Install</a>
+      <a href="#obs-setup-en">OBS Setup</a>
+      <a href="#comments-en">Comments</a>
+      <a href="#privacy-en">Privacy</a>
+      <a href="#editions-en">Editions</a>
+      <a href="#changelog-en">Changelog</a>
+    </div>
+  </nav>
+
+  <main data-lang-content="ja">
     <section id="features">
       <h2>主な機能</h2>
       <div class="grid">
@@ -801,12 +837,442 @@ subtitle_overlay_04.html</code></pre>
       </div>
     </section>
   </main>
+
+  <main data-lang-content="en">
+    <section id="features-en">
+      <h2>Main Features</h2>
+      <div class="grid">
+        <div class="card"><strong>Real-time captions</strong><br><span class="muted">Speech recognition with faster-whisper and translated caption output for OBS.</span></div>
+        <div class="card"><strong>Animated caption HTML</strong><br><span class="muted">Display captions 00-04 as separate Browser Sources with fade, pop, typewriter, and other effects.</span></div>
+        <div class="card"><strong>Comment translation</strong><br><span class="muted">Fetch, translate, and display comments from YouTube, Twitch, and OneComme workflows.</span></div>
+        <div class="card"><strong>CSS design controls</strong><br><span class="muted">Adjust fonts, colors, backgrounds, borders, shadows, line height, and placement for comments and captions.</span></div>
+        <div class="card"><strong>GPU support</strong><br><span class="muted">Use CUDA-capable NVIDIA GPUs for faster transcription when the environment is available.</span></div>
+        <div class="card"><strong>Minimal data storage</strong><br><span class="muted">Designed around real-time display and translation without persistent storage of comment text.</span></div>
+      </div>
+    </section>
+
+    <section id="quick-start-en" class="section">
+      <div class="section-header">
+        <h2>Quick Start Guide</h2>
+      </div>
+
+      <div class="preview-category">
+        <h3>Caption Translation Setup</h3>
+        <div class="preview-grid">
+          <figure>
+            <img src="Translate_Step_01.png" alt="Translate Step 01" class="zoomable">
+            <figcaption>1. Select a speech recognition model<br>
+              2. Select CPU or GPU<br>
+              3. Select your microphone</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Translate_Step_02.png" alt="Translate Step 02" class="zoomable">
+            <figcaption>1. Select the recognition language<br>
+              2. Select the target language<br>
+              3. Start caption translation</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Translate_Step_03.png" alt="Translate Step 03" class="zoomable">
+            <figcaption>1. Press HTML to copy the URL<br>
+              2. Paste the URL into OBS<br>
+              3. Press OK</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Translate_Step_04.png" alt="Translate Step 04" class="zoomable">
+            <figcaption>1. Select a CSS template<br>
+              2. Select a caption animation<br>
+              3. Press Save</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="preview-category">
+        <h3>Comment Translation Setup</h3>
+        <div class="preview-grid">
+          <figure>
+            <img src="Comments_Step_01.png" alt="Comments Step 01" class="zoomable">
+            <figcaption>1. Select a provider<br>
+              2. Enter the Channel Name or Video ID<br>
+              3. Press Connection Check</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Comments_Step_02.png" alt="Comments Step 02" class="zoomable">
+            <figcaption>1. Enable comment translation<br>
+              2. Select the target language<br>
+              3. Start comment fetching</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Comments_Step_03.png" alt="Comments Step 03" class="zoomable">
+            <figcaption>1. Press HTML to copy the URL<br>
+              2. Paste the URL<br>
+              3. Press OK</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Comments_Step_04.png" alt="Comments Step 04" class="zoomable">
+            <figcaption>1. Select a CSS template<br>
+              2. Select an animation<br>
+              3. Press Save</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="usage-guide-en">
+      <h2>Usage Guide</h2>
+
+      <div class="grid two">
+        <div class="card">
+          <h3>Recommended Starting Settings</h3>
+          <ul>
+            <li>With GPU: <code>large-v3-turbo + GPU</code></li>
+            <li>Lightweight setup: <code>small / medium + CPU</code></li>
+            <li>Target language: English</li>
+            <li>Caption HTML animation: Fade or Pop</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid" style="margin-top:16px">
+        <div class="card">
+          <h3>Caption TEXT Source Settings</h3>
+          <ul>
+            <li>Auto-hide seconds</li>
+            <li>Characters per line</li>
+            <li>Maximum lines</li>
+            <li>Partial send</li>
+          </ul>
+          <p class="muted">Formatting settings for OBS Text Source captions.</p>
+        </div>
+
+        <div class="card">
+          <h3>Caption Browser Source Settings</h3>
+          <ul>
+            <li>Font and size</li>
+            <li>Text, background, and border colors</li>
+            <li>Shadow, outline, and corner radius</li>
+            <li>CSS templates and animations</li>
+          </ul>
+          <p class="muted">Adjust the appearance of Browser Source captions.</p>
+        </div>
+
+        <div class="card">
+          <h3>Blacklist / Safelist</h3>
+          <ul>
+            <li>Blacklist: words or phrases to exclude</li>
+            <li>Safelist: words or phrases allowed even if they match the blacklist</li>
+          </ul>
+          <p class="muted">Safelist entries take priority over blacklist entries.</p>
+        </div>
+
+        <div class="card">
+          <h3>Voice Calibration</h3>
+          <ul>
+            <li>Measures room noise and your speaking voice.</li>
+            <li>Shows reference values for speech detection thresholds.</li>
+            <li>Useful when your mic input is too quiet or too sensitive.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Comment Browser Source Settings</h3>
+          <ul>
+            <li>Adjust comment fonts, colors, backgrounds, borders, and shadows.</li>
+            <li>Change display count, left/right alignment, and animations.</li>
+            <li>This controls the appearance of OBS Browser Source comments.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Comment TEXT Source Settings</h3>
+          <ul>
+            <li>Adjust comment formatting for OBS Text Source output.</li>
+            <li>Set display lines, characters per line, and maximum lines.</li>
+            <li>Use OBS Text Source settings for left/right placement.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Comment Formatting and Filter Details</h3>
+          <ul>
+            <li>Configure how URLs, long comments, and blank comments are handled.</li>
+            <li>Adjust maximum lengths for text-to-speech and OBS display.</li>
+            <li>Use this to reduce spam or unwanted comments.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Custom Emoji Dictionary</h3>
+          <ul>
+            <li>Register shortcodes such as YouTube emoji codes.</li>
+            <li>Set display text or image URLs.</li>
+            <li>Useful for making comment display more stream-friendly.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Text-to-Speech Dictionary</h3>
+          <ul>
+            <li>Register custom readings for comment text-to-speech.</li>
+            <li>Adjust abbreviations, internet slang, and proper nouns.</li>
+            <li>Useful for making VOICEVOX reading sound more natural.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="requirements-en">
+      <h2>System Requirements</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>Minimum</h3>
+          <ul>
+            <li>Windows 10 / 11</li>
+            <li>64-bit environment</li>
+            <li>4-core CPU or better recommended</li>
+            <li>8GB RAM or more</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Recommended</h3>
+          <ul>
+            <li>NVIDIA GPU</li>
+            <li>CUDA-capable environment</li>
+            <li>16GB RAM or more</li>
+            <li>SSD storage</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="installation-en">
+      <h2>Installation</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>1. Launch the Downloader</h3>
+          <ol>
+            <li>Download <code>OBS Misa Translator Downloader.exe</code> from Booth or itch.io.</li>
+            <li>Launch the Downloader.</li>
+            <li>Press Download / Install.</li>
+          </ol>
+          <p class="muted">The Downloader fetches the latest version and launches the installer.</p>
+        </div>
+
+        <div class="card">
+          <h3>2. Run the Installer</h3>
+          <ol>
+            <li>Review the license.</li>
+            <li>Select the install location.</li>
+            <li>Press Install.</li>
+          </ol>
+          <p class="muted">Windows Defender may show a confirmation message on the first launch.</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px">
+        <h3>3. Launch OBS Misa Translator</h3>
+        <ol>
+          <li>Select your microphone.</li>
+          <li>Select a Whisper model.</li>
+          <li>Select the target language.</li>
+          <li>Press Start Caption Translation.</li>
+        </ol>
+        <p class="muted">Updates are available from the Update button in the header.</p>
+      </div>
+    </section>
+
+    <section id="models-en">
+      <h2>Speech Recognition Quality (Whisper Model Manager)</h2>
+      <div class="card">
+        <p>
+          OBS Misa Translator uses faster-whisper models.<br>
+          Whisper is the speech recognition system, and the model is like its level of intelligence.
+        </p>
+        <ul>
+          <li>small: lightweight</li>
+          <li>medium: balanced</li>
+          <li>large-v3-turbo: high quality</li>
+        </ul>
+        <p>You can delete unused models from the Model Manager.</p>
+        <p class="muted">Whisper models may take several gigabytes of storage.</p>
+      </div>
+      <div class="notice">
+        On first use, OBS Misa Translator downloads the selected Whisper model.
+        Some models are several gigabytes. Downloading them in advance from Model Manager can make setup smoother.
+      </div>
+    </section>
+
+    <section id="obs-setup-en">
+      <h2>OBS Setup</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>Text Source</h3>
+          <p class="muted">Load each <code>obs_subtitle_00.txt</code> through <code>obs_subtitle_04.txt</code> in OBS Text Source.</p>
+          <ul>
+            <li>Caption 00: recognition result</li>
+            <li>Caption 01: translation result</li>
+            <li>Captions 02-04: additional translated captions</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Browser Source</h3>
+          <p class="muted">To use caption HTML, register each dedicated HTML file in OBS Browser Source.</p>
+          <pre><code>subtitle_overlay_00.html
+subtitle_overlay_01.html
+subtitle_overlay_02.html
+subtitle_overlay_03.html
+subtitle_overlay_04.html</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="comments-en">
+      <h2>Comment Features</h2>
+      <div class="card">
+        <p>OBS Misa Translator can fetch, translate, and display comments. The design avoids persistent storage of platform-derived data such as comment text and author names.</p>
+        <h3>OneComme Integration Plan</h3>
+        <ul>
+          <li>Initial implementation candidate: post translated text as a new BOT comment.</li>
+          <li>Future candidate: update existing comments by matching comment IDs.</li>
+          <li>Note: WordParty may not trigger when comments are updated instead of newly posted.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="updates-en">
+      <h2>Updates</h2>
+      <div class="card">
+        <p>OBS Misa Translator supports automatic update checks.</p>
+        <ul>
+          <li>Check for the latest version on startup</li>
+          <li>Update button notification in the header</li>
+          <li>Automatic installer download</li>
+          <li>SHA256 verification support</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="privacy-en">
+      <h2>Data Storage Policy</h2>
+      <div class="notice">
+        As a general policy, OBSMT does not persistently store platform-derived data such as comment text or author names. It focuses on temporary real-time processing for display, translation, and text-to-speech during streams.
+      </div>
+      <div class="grid two" style="margin-top:16px">
+        <div class="card"><strong>Not Stored Persistently</strong><ul><li>Comment text logs</li><li>Long-term per-author history</li><li>External database or cloud storage</li></ul></div>
+        <div class="card"><strong>Temporary Use</strong><ul><li>OBS display txt/js/html files</li><li>In-memory data during streams</li><li>Aggregate data that does not include comment text</li></ul></div>
+      </div>
+    </section>
+
+    <section id="editions-en">
+      <h2>Editions</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>FREE</th>
+            <th>FULL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Processing</td>
+            <td>CPU only</td>
+            <td>CPU / GPU</td>
+          </tr>
+          <tr>
+            <td>Captions</td>
+            <td>Captions 00 / 01</td>
+            <td>Captions 00-04</td>
+          </tr>
+          <tr>
+            <td>Translation languages</td>
+            <td>Mainly English</td>
+            <td>Multiple languages</td>
+          </tr>
+          <tr>
+            <td>Comment translation</td>
+            <td>Available</td>
+            <td>Available</td>
+          </tr>
+          <tr>
+            <td>OneComme integration</td>
+            <td>Not available</td>
+            <td>Available</td>
+          </tr>
+          <tr>
+            <td>HTML effects</td>
+            <td>Basic effects</td>
+            <td>All effects / advanced CSS</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="faq-en">
+      <h2>FAQ</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>Q. The first launch is slow.</h3>
+          <p>The first launch may take longer because Whisper models and fonts need to be prepared.</p>
+        </div>
+
+        <div class="card">
+          <h3>Q. GPU is not used.</h3>
+          <p>Please check that CUDA, cuDNN, and your NVIDIA driver are installed correctly.</p>
+        </div>
+
+        <div class="card">
+          <h3>Q. Windows Defender shows a warning.</h3>
+          <p>SmartScreen warnings may appear for newly distributed applications.</p>
+        </div>
+
+        <div class="card">
+          <h3>Q. Comments cannot be fetched.</h3>
+          <p>Please check the stream URL, YouTube Live status, and comment fetching settings.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="changelog-en">
+      <h2>Changelog</h2>
+      <div class="card">
+        <h3>v0.5.117</h3>
+        <ul>
+          <li>Added MIC LEVEL meter</li>
+          <li>Added Whisper model download progress display</li>
+          <li>Improved model download failure and incomplete download detection</li>
+          <li>Cleaned up comment connection UI</li>
+          <li>Restored comment display count setting</li>
+          <li>Added left/right comment alignment switching</li>
+          <li>Expanded supported languages to 28</li>
+          <li>UI improvements and bug fixes</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="notes-en">
+      <h2>Notes</h2>
+      <div class="card">
+        <ul>
+          <li>GPU usage requires a suitable CUDA / cuDNN / ctranslate2 environment.</li>
+          <li>If you set an OpenAI API key, be careful not to expose it through screen sharing or pasted logs.</li>
+          <li>Please follow the terms of service of the streaming platform or comment source you use.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
   
   <div id="lightbox" class="lightbox">
     <img id="lightbox-img">   
   </div>
   
-  <footer>
+  <footer data-lang-content="ja">
     <p class="muted" style="font-size:0.9rem;">
       本サイトでは利用状況の把握のため Cloudflare Web Analytics を利用しています。
       Cookie は使用していません。
@@ -821,12 +1287,27 @@ subtitle_overlay_04.html</code></pre>
     <a href="https://x.com/Magical_Shooter">X.com</a>
     
   </footer>
+  <footer data-lang-content="en">
+    <p class="muted" style="font-size:0.9rem;">
+      This site uses Cloudflare Web Analytics to understand usage.
+      It does not use cookies.
+    </p>
+
+    @ Misa /
+
+    <a href="https://magicalshooter.github.io/vrc-misa-translator/">VRC Misa Translator</a> |
+    <a href="https://magicalshooter.github.io/OBSMisaTranslator/">OBS Misa Translator</a> |
+    <a href="https://magicalshooter.booth.pm/">Booth</a> |
+    <a href="https://magicalshooter.itch.io">itch.io</a> |
+    <a href="https://x.com/Magical_Shooter">X.com</a>
+  </footer>
   <script>
-    const SUPPORTED_LANGS = ["ja"];
+    const SUPPORTED_LANGS = ["ja", "en"];
     const STORAGE_KEY = "obsmt_site_language";
 
     function browserLanguage() {
-      return "ja";
+      const language = (navigator.language || navigator.userLanguage || "ja").toLowerCase();
+      return language.startsWith("ja") ? "ja" : "en";
     }
 
     function currentLanguage() {
