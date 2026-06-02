@@ -101,12 +101,24 @@
       font-weight: 700;
       line-height: 1.35;
     }
-    .guide-image {
-      cursor: zoom-in;
-      transition: transform .15s ease;
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.85);
+      z-index: 9999;
+      cursor: zoom-out;
     }
-    .guide-image:hover {
-      transform: scale(1.02);
+    .lightbox img {
+      max-width: 95%;
+      max-height: 95%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .zoomable {
+      cursor: zoom-in;
     }
     .button {
       display: inline-flex;
