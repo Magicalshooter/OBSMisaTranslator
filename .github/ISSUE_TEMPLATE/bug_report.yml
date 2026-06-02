@@ -3,11 +3,11 @@ description: Report a bug
 title: "[Bug] "
 labels:
 
-* bug
+- bug
 
 body:
 
-* type: input
+- type: input
   id: version
   attributes:
   label: Version
@@ -15,14 +15,14 @@ body:
   validations:
   required: true
 
-* type: textarea
+- type: textarea
   id: problem
   attributes:
   label: What happened?
   validations:
   required: true
 
-* type: textarea
+- type: textarea
   id: steps
   attributes:
   label: Steps to reproduce
@@ -33,12 +33,12 @@ body:
   validations:
   required: true
 
-* type: textarea
+- type: textarea
   id: log
   attributes:
   label: Log / Error Message
 
-* type: textarea
+- type: textarea
   id: screenshot
   attributes:
   label: Screenshot
