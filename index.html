@@ -249,18 +249,6 @@
     </div>
   </header>
 
-  <header data-lang-content="en">
-    <div class="badge">OBS Misa Translator v0.5.116 / README draft</div>
-    <h1>Real-time subtitles and comment translation for streamers</h1>
-    <p class="lead">OBS Misa Translator helps streamers handle microphone transcription, translated subtitles, comment translation, and OBS Text Source / Browser Source output.</p>
-    <div class="hero-actions">
-      <a class="button" href="#quick-start">Quick start</a>
-      <a class="button secondary" href="#obs-setup">OBS setup</a>
-      <a class="button secondary" href="#notes">Notes</a>
-      <a class="button secondary" href="License.html">License</a>
-    </div>
-  </header>
-
   <nav>
     <div class="inner">
       <a href="#features">機能</a>
@@ -449,35 +437,7 @@
     </div>
   </div>
 </section>
-
-<section id="requirements" data-lang-content="en">
-  <h2>System Requirements</h2>
-
-  <div class="grid two">
-    <div class="card">
-      <h3>Minimum</h3>
-
-      <ul>
-        <li>Windows 10 / 11</li>
-        <li>64bit environment</li>
-        <li>4-core CPU or higher recommended</li>
-        <li>8GB RAM</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Recommended</h3>
-
-      <ul>
-        <li>NVIDIA GPU</li>
-        <li>CUDA compatible environment</li>
-        <li>16GB+ RAM</li>
-        <li>SSD storage</li>
-      </ul>
-    </div>
-  </div>
-</section>
-    
+ 
 <section id="quick-start">
   <h2>クイックスタート / Installation</h2>
 
@@ -486,7 +446,7 @@
       <h3>1. Downloader を起動</h3>
 
       <ol>
-        <li>Booth または配布ページから <code>OBS Misa Translator Downloader.exe</code> をダウンロードします。</li>
+        <li>Booth またはitch.ioから <code>OBS Misa Translator Downloader.exe</code> をダウンロードします。</li>
         <li>Downloader を起動します。</li>
         <li>「Download / Install」を押します。</li>
       </ol>
@@ -528,11 +488,12 @@
 </section>
 
     <section id="models">
-  <h2>Whisper モデル管理</h2>
+  <h2>音声認識の頭の良さ（Whisper モデル管理）</h2>
 
   <div class="card">
     <p>
-      OBS Misa Translator は faster-whisper モデルを利用します。
+      OBS Misa Translator は faster-whisper モデルを利用します。<br>
+      Whisperは翻訳システムの一種で、モデルとは頭の良さのようなものです。
     </p>
 
     <ul>
@@ -552,6 +513,7 @@
       <div class="notice">
   初回利用時は Whisper モデルのダウンロードが行われます。
   モデルサイズによっては数GBになる場合があります。
+  モデル管理から先にダウンロードしておくとスムーズです。
 </div>
 </section>
 
@@ -672,58 +634,6 @@ subtitle_overlay_04.html</code></pre>
   </table>
 </section>
 
-<section id="editions" data-lang-content="en">
-  <h2>Editions</h2>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Feature</th>
-        <th>FREE</th>
-        <th>FULL</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td>Processing</td>
-        <td>CPU only</td>
-        <td>CPU / GPU</td>
-      </tr>
-
-      <tr>
-        <td>Subtitles</td>
-        <td>Subtitle 00 / 01</td>
-        <td>Subtitle 00〜04</td>
-      </tr>
-
-      <tr>
-        <td>Translation Languages</td>
-        <td>English focused</td>
-        <td>Multi-language</td>
-      </tr>
-
-      <tr>
-        <td>Comment Translation</td>
-        <td>Available</td>
-        <td>Available</td>
-      </tr>
-
-      <tr>
-        <td>WanNyan / OneComme Integration</td>
-        <td>Not available</td>
-        <td>Available</td>
-      </tr>
-
-      <tr>
-        <td>HTML Effects</td>
-        <td>Basic effects</td>
-        <td>All effects / advanced CSS</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-    
 <section id="faq">
   <h2>FAQ / よくある質問</h2>
 
