@@ -413,111 +413,109 @@
   </div>
 </section>
     
-    <section id="usage-guide">
-      <h2>使用ガイド</h2>
-      <div class="grid two">
-        <div class="card">
-          <h3>おすすめ初期設定</h3>
-          <ul>
-            <li>GPU環境あり: <code>large-v3-turbo + GPU</code></li>
-            <li>軽量環境: <code>small / medium + CPU</code></li>
-            <li>翻訳先: English</li>
-            <li>字幕HTML演出: Fade または Pop</li>
-          </ul>
-        </div>
-      </div>
+<section id="usage-guide">
+  <h2>使用ガイド</h2>
 
-      <div class="grid" style="margin-top:16px">
-        <div class="card">
-          <h3>字幕TEXTソース設定</h3>
-          <ul>
-            <li>自動消去秒数</li>
-            <li>1行文字数</li>
-            <li>最大行数</li>
-            <li>途中送信</li>
-          </ul>
-          <p class="muted">OBS Text Source向けの字幕整形設定です。</p>
-        </div>
+  <div class="grid two">
+    <div class="card">
+      <h3>おすすめ初期設定</h3>
+      <ul>
+        <li>GPU環境あり: <code>large-v3-turbo + GPU</code></li>
+        <li>軽量環境: <code>small / medium + CPU</code></li>
+        <li>翻訳先: English</li>
+        <li>字幕HTML演出: Fade または Pop</li>
+      </ul>
+    </div>
+  </div>
 
-        <div class="card">
-          <h3>字幕ブラウザソース設定</h3>
-          <ul>
-            <li>フォント / サイズ</li>
-            <li>文字色 / 背景色 / 枠色</li>
-            <li>影 / 縁取り / 角丸</li>
-            <li>CSSテンプレ / アニメーション</li>
-          </ul>
-          <p class="muted">Browser Source字幕の見た目を調整できます。</p>
-        </div>
+  <div class="grid" style="margin-top:16px">
+    <div class="card">
+      <h3>字幕TEXTソース設定</h3>
+      <ul>
+        <li>自動消去秒数</li>
+        <li>1行文字数</li>
+        <li>最大行数</li>
+        <li>途中送信</li>
+      </ul>
+      <p class="muted">OBS Text Source向けの字幕整形設定です。</p>
+    </div>
 
-        <div class="card">
-          <h3>ブラックリスト / セーフリスト</h3>
-          <ul>
-            <li>ブラックリスト: 除外したい語句</li>
-            <li>セーフリスト: 除外を上書きして通す語句</li>
-          </ul>
-          <p class="muted">セーフリストはブラックリストより優先されます。</p>
-        </div>
-        <div class="grid two" style="margin-top:16px">
-          <div class="card">
-            <h3>音声キャリブレーション</h3>
-            <ul>
-              <li>マイクの環境音と話し声を測定します。</li>
-              <li>音声認識の開始しきい値の参考値を確認できます。</li>
-              <li>マイク入力が小さすぎる、または反応しすぎる場合の調整に役立ちます。</li>
-            </ul>
-          </div>
-          
-          <div class="card">
-            <h3>コメントブラウザソース設定</h3>
-            <ul>
-              <li>コメント表示のフォント、色、背景、枠、影を調整できます。</li>
-              <li>コメント表示件数や左右配置、アニメーションを変更できます。</li>
-              <li>OBS Browser Source向けの見た目を設定する画面です。</li>
-            </ul>
-          </div>
+    <div class="card">
+      <h3>字幕ブラウザソース設定</h3>
+      <ul>
+        <li>フォント / サイズ</li>
+        <li>文字色 / 背景色 / 枠色</li>
+        <li>影 / 縁取り / 角丸</li>
+        <li>CSSテンプレ / アニメーション</li>
+      </ul>
+      <p class="muted">Browser Source字幕の見た目を調整できます。</p>
+    </div>
 
-          <div class="card">
-            <h3>コメントTEXTソース設定</h3>
-            <ul>
-              <li>OBS Text Source向けのコメント表示形式を調整できます。</li>
-              <li>表示件数、1行文字数、最大行数を設定できます。</li>
-              <li>左右配置はOBS側のテキストソース設定で調整してください。</li>
-            </ul>
-          </div>
-        </div>
+    <div class="card">
+      <h3>ブラックリスト / セーフリスト</h3>
+      <ul>
+        <li>ブラックリスト: 除外したい語句</li>
+        <li>セーフリスト: 除外を上書きして通す語句</li>
+      </ul>
+      <p class="muted">セーフリストはブラックリストより優先されます。</p>
+    </div>
 
-        <div class="grid two" style="margin-top:16px">
-          <div class="card">
-            <h3>コメント整形・フィルタ詳細</h3>
-            <ul>
-              <li>URL、長文、空白コメントなどの扱いを設定できます。</li>
-              <li>読み上げ最大文字数やOBS表示最大文字数を調整できます。</li>
-              <li>スパムや不要なコメントを減らしたい場合に使用します。</li>
-            </ul>
-          </div>
+    <div class="card">
+      <h3>音声キャリブレーション</h3>
+      <ul>
+        <li>マイクの環境音と話し声を測定します。</li>
+        <li>音声認識の開始しきい値の参考値を確認できます。</li>
+        <li>マイク入力が小さすぎる、または反応しすぎる場合の調整に役立ちます。</li>
+      </ul>
+    </div>
 
-          <div class="card">
-            <h3>カスタム絵文字辞書</h3>
-            <ul>
-              <li>YouTube絵文字などのショートコードを登録できます。</li>
-              <li>表示する文字列や画像URLを指定できます。</li>
-              <li>コメント表示を配信向けに整えたい場合に便利です。</li>
-            </ul>
-          </div>
+    <div class="card">
+      <h3>コメントブラウザソース設定</h3>
+      <ul>
+        <li>コメント表示のフォント、色、背景、枠、影を調整できます。</li>
+        <li>コメント表示件数や左右配置、アニメーションを変更できます。</li>
+        <li>OBS Browser Source向けの見た目を設定する画面です。</li>
+      </ul>
+    </div>
 
-          <div class="card">
-            <h3>読み上げ辞書</h3>
-            <ul>
-              <li>コメント読み上げ時の読み方を登録できます。</li>
-              <li>略語、ネットスラング、固有名詞の読みを調整できます。</li>
-              <li>VOICEVOX読み上げを自然にしたい場合に使用します。</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="card">
+      <h3>コメントTEXTソース設定</h3>
+      <ul>
+        <li>OBS Text Source向けのコメント表示形式を調整できます。</li>
+        <li>表示件数、1行文字数、最大行数を設定できます。</li>
+        <li>左右配置はOBS側のテキストソース設定で調整してください。</li>
+      </ul>
+    </div>
 
+    <div class="card">
+      <h3>コメント整形・フィルタ詳細</h3>
+      <ul>
+        <li>URL、長文、空白コメントなどの扱いを設定できます。</li>
+        <li>読み上げ最大文字数やOBS表示最大文字数を調整できます。</li>
+        <li>スパムや不要なコメントを減らしたい場合に使用します。</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>カスタム絵文字辞書</h3>
+      <ul>
+        <li>YouTube絵文字などのショートコードを登録できます。</li>
+        <li>表示する文字列や画像URLを指定できます。</li>
+        <li>コメント表示を配信向けに整えたい場合に便利です。</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>読み上げ辞書</h3>
+      <ul>
+        <li>コメント読み上げ時の読み方を登録できます。</li>
+        <li>略語、ネットスラング、固有名詞の読みを調整できます。</li>
+        <li>VOICEVOX読み上げを自然にしたい場合に使用します。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+    
 <section id="requirements" data-lang-content="ja">
   <h2>システム要件</h2>
 
