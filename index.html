@@ -861,6 +861,22 @@ subtitle_overlay_04.html</code></pre>
     
   </script>
   <!-- End Cloudflare Web Analytics -->
+
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    document.querySelectorAll(".zoomable").forEach(img => {
+      img.addEventListener("click", () => {
+        lightboxImg.src = img.src;
+        lightbox.style.display = "block";
+      });
+    });
+
+    lightbox.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
+  </script>
   
   <div id="lightbox" class="lightbox">     
     <img id="lightbox-img">   
