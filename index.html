@@ -726,10 +726,7 @@ subtitle_overlay_04.html</code></pre>
     const STORAGE_KEY = "obsmt_site_language";
 
     function browserLanguage() {
-      const langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "ja"];
-      const joined = langs.join(" ").toLowerCase();
-      if (joined.includes("ja")) return "ja";
-      return "en";
+      return "ja";
     }
 
     function currentLanguage() {
