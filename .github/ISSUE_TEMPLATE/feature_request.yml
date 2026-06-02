@@ -2,24 +2,23 @@ name: Feature Request
 description: Suggest a new feature
 title: "[Feature] "
 labels:
-
-* enhancement
+  - enhancement
 
 body:
+  - type: textarea
+    id: request
+    attributes:
+      label: Feature request
+      description: What would you like to add?
+    validations:
+      required: true
 
-* type: textarea
-  id: request
-  attributes:
-  label: Feature request
-  validations:
-  required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why is this useful?
 
-* type: textarea
-  id: reason
-  attributes:
-  label: Why is this useful?
-
-* type: textarea
-  id: idea
-  attributes:
-  label: Additional notes
+  - type: textarea
+    id: idea
+    attributes:
+      label: Additional notes
