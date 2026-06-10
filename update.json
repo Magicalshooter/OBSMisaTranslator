@@ -3,6 +3,6 @@
   "latest_version": "v0.5.121",
   "installer_url": "https://github.com/Magicalshooter/OBSMisaTranslator/releases/download/v0.5.121/OBS_Misa_Translator_Setup_v0_5_121.exe",
   "download_url": "https://magicalshooter.github.io/OBSMisaTranslator/Updates.html",
-  "sha256": "a829cfa927ebea694c07670b99b4073083cd9aa3c56d3b223e973d6d80820800",
+  "sha256": "47ecdf2703479a7de2d6c3782c551b9fe86326883dd439c5128e83a1e14c75a8",
   "release_notes": "v0.5.121\n\n・各種UI改善と不具合修正"
 }
