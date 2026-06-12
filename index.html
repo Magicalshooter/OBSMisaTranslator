@@ -323,6 +323,7 @@
       <a href="#features">機能</a>
       <a href="#quick-start">クイックスタート</a>
       <a href="#installation">導入</a>
+      <a href="#openai-api-key">OpenAI API Key</a>
       <a href="#obs-setup">OBS設定</a>
       <a href="#comments">コメント</a>
       <a href="#privacy">保存方針</a>
@@ -336,6 +337,7 @@
       <a href="#features-en">Features</a>
       <a href="#quick-start-en">Quick Start</a>
       <a href="#installation-en">Install</a>
+      <a href="#openai-api-key-en">OpenAI API Key</a>
       <a href="#obs-setup-en">OBS Setup</a>
       <a href="#comments-en">Comments</a>
       <a href="#privacy-en">Privacy</a>
@@ -663,6 +665,73 @@
     <p class="muted">
       更新はヘッダーの「更新」ボタンから行えます。
     </p>
+  </div>
+</section>
+
+<section id="openai-api-key">
+  <h2>OpenAI API Keyについて</h2>
+
+  <div class="notice">
+    ChatGPT翻訳モード（自然な翻訳）を利用する場合はOpenAI API Keyが必要です。
+    Google翻訳モードのみを使用する場合は不要です。
+  </div>
+
+  <div class="grid two" style="margin-top:16px">
+    <div class="card">
+      <h3>API Key取得方法</h3>
+      <ol>
+        <li><a href="https://platform.openai.com/" target="_blank">OpenAI Platform</a>へログインします。</li>
+        <li>右上のアカウントメニューから API Keys を開くか、<a href="https://platform.openai.com/api-keys" target="_blank">API Keysページ</a>へアクセスします。</li>
+        <li>Create new secret key を押します。名前は <code>OBSMisaTranslator</code> など分かりやすいものでOKです。</li>
+        <li>表示された <code>sk-...</code> 形式のキーをコピーします。Secret keyは一度しか表示されないため、必要な場所へすぐ貼り付けてください。</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h3>OBSMTへ設定</h3>
+      <ol>
+        <li>OBSMisaTranslatorを起動します。</li>
+        <li><code>OpenAI API Key</code> 欄へコピーしたキーを貼り付けます。</li>
+        <li>ChatGPT翻訳モードを使う設定に切り替えて利用します。</li>
+      </ol>
+      <p class="muted">
+        ChatGPT翻訳を使わなくても、OBSMisaTranslatorは利用できます。
+        Google翻訳モードでも通常のリアルタイム翻訳は可能です。
+      </p>
+    </div>
+  </div>
+
+  <div class="grid two" style="margin-top:16px">
+    <div class="card">
+      <h3>課金と使いすぎ防止</h3>
+      <p>
+        OpenAI APIは従量課金制です。一般的な翻訳用途では、少額の残高でもかなり利用できます。
+      </p>
+      <ul>
+        <li><a href="https://platform.openai.com/settings/organization/billing/overview" target="_blank">Billing</a>で残高や請求状況を確認できます。</li>
+        <li><a href="https://platform.openai.com/settings/organization/limits" target="_blank">Limits</a>で月額上限を設定できます。</li>
+        <li>最初は 5ドル / 10ドル 程度の上限から始めると安心です。</li>
+      </ul>
+      <p class="muted">
+        429エラーや quota 系のエラーが出る場合は、残高不足、利用上限到達、またはレート制限の可能性があります。
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>セキュリティ</h3>
+      <p>
+        API Keyはパスワードのようなものです。他人に教えたり、配信画面やSNSに映したりしないでください。
+      </p>
+      <ul>
+        <li>画面共有やログ貼り付けで映らないよう注意してください。</li>
+        <li>漏洩した場合はOpenAI側で古いキーを削除し、新しいキーを発行してください。</li>
+        <li>キーは必要な人ごと、用途ごとに分けて管理すると安全です。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="notice" style="margin-top:16px">
+    ChatGPT翻訳モードは、より自然な表現、文脈を考慮した翻訳、配信や国際交流での読みやすさを重視したい方向けの追加機能です。
   </div>
 </section>
 
@@ -1157,6 +1226,73 @@ subtitle_overlay_04.html</code></pre>
           <li>Press Start Caption Translation.</li>
         </ol>
         <p class="muted">Updates are available from the Update button in the header.</p>
+      </div>
+    </section>
+
+    <section id="openai-api-key-en">
+      <h2>About the OpenAI API Key</h2>
+
+      <div class="notice">
+        An OpenAI API key is required only when you use ChatGPT translation mode for more natural translations.
+        If you only use Google translation mode, you do not need an OpenAI API key.
+      </div>
+
+      <div class="grid two" style="margin-top:16px">
+        <div class="card">
+          <h3>How to get an API key</h3>
+          <ol>
+            <li>Log in to the <a href="https://platform.openai.com/" target="_blank">OpenAI Platform</a>.</li>
+            <li>Open API Keys from the account menu, or go directly to the <a href="https://platform.openai.com/api-keys" target="_blank">API Keys page</a>.</li>
+            <li>Press Create new secret key. A name such as <code>OBSMisaTranslator</code> is fine.</li>
+            <li>Copy the displayed key, which usually starts with <code>sk-</code>. The full secret key is shown only once, so copy it before closing the dialog.</li>
+          </ol>
+        </div>
+
+        <div class="card">
+          <h3>Set it in OBSMT</h3>
+          <ol>
+            <li>Launch OBS Misa Translator.</li>
+            <li>Paste the copied key into the <code>OpenAI API Key</code> field.</li>
+            <li>Switch to ChatGPT translation mode when you want to use it.</li>
+          </ol>
+          <p class="muted">
+            OBS Misa Translator can still be used without ChatGPT translation.
+            Normal real-time translation is available with Google translation mode.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid two" style="margin-top:16px">
+        <div class="card">
+          <h3>Billing and usage limits</h3>
+          <p>
+            OpenAI API usage is pay-as-you-go. For typical translation use, even a small balance can cover a lot of usage.
+          </p>
+          <ul>
+            <li>Check your balance and billing from <a href="https://platform.openai.com/settings/organization/billing/overview" target="_blank">Billing</a>.</li>
+            <li>Set a monthly cap from <a href="https://platform.openai.com/settings/organization/limits" target="_blank">Limits</a>.</li>
+            <li>Starting with a 5 USD or 10 USD limit is a safe first setting.</li>
+          </ul>
+          <p class="muted">
+            If you see a 429 or quota-related error, check your balance, usage limit, and rate limit status.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Security</h3>
+          <p>
+            Treat your API key like a password. Do not share it, show it on stream, or post it on social media.
+          </p>
+          <ul>
+            <li>Be careful when sharing your screen or pasting logs.</li>
+            <li>If the key is leaked, delete it in OpenAI and create a new one.</li>
+            <li>Using separate keys for different people or purposes makes key management safer.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="notice" style="margin-top:16px">
+        ChatGPT translation mode is an optional feature for users who want more natural wording, context-aware translation, and readable captions for streams or international communication.
       </div>
     </section>
 
