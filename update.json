@@ -4,5 +4,5 @@
   "installer_url": "https://github.com/Magicalshooter/OBSMisaTranslator/releases/download/v0.5.129/OBS_Misa_Translator_Setup_v0_5_129.exe",
   "download_url": "https://magicalshooter.github.io/OBSMisaTranslator/Updates.html",
   "sha256": "sha256:8f2b339f02783bba929b0215b300314248b38b8abaad3cb81fec2e56ee26a868",
-  "release_notes": "v0.5.128\n\n・各種UI改善と不具合修正。グリッチタイプの追加"
+  "release_notes": "v0.5.129\n\n・VoiceVoxの詳細設定の追加"
 }
