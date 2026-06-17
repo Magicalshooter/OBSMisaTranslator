@@ -1,8 +1,8 @@
 {
-  "version": "v0.5.128",
-  "latest_version": "v0.5.128",
-  "installer_url": "https://github.com/Magicalshooter/OBSMisaTranslator/releases/download/v0.5.128/OBS_Misa_Translator_Setup_v0_5_128.exe",
+  "version": "v0.5.129",
+  "latest_version": "v0.5.129",
+  "installer_url": "https://github.com/Magicalshooter/OBSMisaTranslator/releases/download/v0.5.129/OBS_Misa_Translator_Setup_v0_5_129.exe",
   "download_url": "https://magicalshooter.github.io/OBSMisaTranslator/Updates.html",
-  "sha256": "1400947a0a554e07a6dd535b6bc3aaa54045202a6051195f8e254ae98b7c5623",
+  "sha256": "sha256:8f2b339f02783bba929b0215b300314248b38b8abaad3cb81fec2e56ee26a868",
   "release_notes": "v0.5.128\n\n・各種UI改善と不具合修正。グリッチタイプの追加"
 }
