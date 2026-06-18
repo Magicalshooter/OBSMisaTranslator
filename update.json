@@ -1,8 +1,8 @@
 {
-  "version": "v0.5.129",
-  "latest_version": "v0.5.129",
-  "installer_url": "https://github.com/Magicalshooter/OBSMisaTranslator/releases/download/v0.5.129/OBS_Misa_Translator_Setup_v0_5_129.exe",
+  "version": "v0.5.131",
+  "latest_version": "v0.5.131",
+  "installer_url": "https://github.com/Magicalshooter/OBSMisaTranslator/releases/download/v0.5.131/OBS_Misa_Translator_Setup_v0_5_131.exe",
   "download_url": "https://magicalshooter.github.io/OBSMisaTranslator/Updates.html",
-  "sha256": "8f2b339f02783bba929b0215b300314248b38b8abaad3cb81fec2e56ee26a868",
-  "release_notes": "v0.5.129\n\n・VoiceVoxの詳細設定の追加"
+  "sha256": "d9d72d807aa3432ffb46e34d0e70722b7519cbc4dd455a4df2b3dc4c968f98c9",
+  "release_notes": "v0.5.131\n\n・読み上げ停止対策と絵文字関係の表示改善"
 }
