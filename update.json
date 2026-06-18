@@ -1,8 +1,8 @@
 {
-  "version": "v0.5.133",
-  "latest_version": "v0.5.133",
-  "installer_url": "https://github.com/Magicalshooter/OBSMisaTranslator/releases/download/v0.5.133/OBS_Misa_Translator_Setup_v0_5_133.exe",
+  "version": "v0.5.134",
+  "latest_version": "v0.5.134",
+  "installer_url": "https://github.com/Magicalshooter/OBSMisaTranslator/releases/download/v0.5.134/OBS_Misa_Translator_Setup_v0_5_134.exe",
   "download_url": "https://magicalshooter.github.io/OBSMisaTranslator/Updates.html",
-  "sha256": "c7777a55ff63ab1c54b16cfe1bcd07edfd13bf66c5c11302feadad26bf4954a2",
-  "release_notes": "v0.5.133\n\n・フォントが変更できない問題に対策しました"
+  "sha256": "c6aebc5c22cc5226de0890d39e7dda4bc2d6704b657a1a248e583263e2408d34",
+  "release_notes": "v0.5.134\n\n・フキダシの仕様を変更しました。こんにちはが絵文字になってしまう現象に対策しました"
 }
