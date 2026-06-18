@@ -1,8 +1,8 @@
 {
-  "version": "v0.5.131",
-  "latest_version": "v0.5.131",
-  "installer_url": "https://github.com/Magicalshooter/OBSMisaTranslator/releases/download/v0.5.131/OBS_Misa_Translator_Setup_v0_5_131.exe",
+  "version": "v0.5.133",
+  "latest_version": "v0.5.133",
+  "installer_url": "https://github.com/Magicalshooter/OBSMisaTranslator/releases/download/v0.5.133/OBS_Misa_Translator_Setup_v0_5_133.exe",
   "download_url": "https://magicalshooter.github.io/OBSMisaTranslator/Updates.html",
-  "sha256": "d9d72d807aa3432ffb46e34d0e70722b7519cbc4dd455a4df2b3dc4c968f98c9",
-  "release_notes": "v0.5.131\n\n・読み上げ停止対策と絵文字関係の表示改善"
+  "sha256": "c7777a55ff63ab1c54b16cfe1bcd07edfd13bf66c5c11302feadad26bf4954a2",
+  "release_notes": "v0.5.133\n\n・フォントが変更できない問題に対策しました"
 }
