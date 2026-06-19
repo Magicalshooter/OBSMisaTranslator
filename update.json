@@ -1,8 +1,8 @@
 {
-  "version": "v0.5.134",
-  "latest_version": "v0.5.134",
-  "installer_url": "https://github.com/Magicalshooter/OBSMisaTranslator/releases/download/v0.5.134/OBS_Misa_Translator_Setup_v0_5_134.exe",
+  "version": "v0.5.136",
+  "latest_version": "v0.5.136",
+  "installer_url": "https://github.com/Magicalshooter/OBSMisaTranslator/releases/download/v0.5.136/OBS_Misa_Translator_Setup_v0_5_136.exe",
   "download_url": "https://magicalshooter.github.io/OBSMisaTranslator/Updates.html",
-  "sha256": "c6aebc5c22cc5226de0890d39e7dda4bc2d6704b657a1a248e583263e2408d34",
-  "release_notes": "v0.5.134\n\n・フキダシの仕様を変更しました。こんにちはが絵文字になってしまう現象に対策しました"
+  "sha256": "67fde4d9ad82afd92f471b9f71ea8ab6f777e5edf5f08d4c477333a14fa038de",
+  "release_notes": "v0.5.136\n\n・8888をパチパチパチパチと読み上げるようにしました。絵文字を追加しました。絵文字追加システムを追加しました"
 }
