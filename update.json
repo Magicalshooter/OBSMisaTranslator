@@ -1,8 +1,8 @@
 {
-  "version": "v0.5.136",
-  "latest_version": "v0.5.136",
-  "installer_url": "https://github.com/Magicalshooter/OBSMisaTranslator/releases/download/v0.5.136/OBS_Misa_Translator_Setup_v0_5_136.exe",
+  "version": "v0.5.138",
+  "latest_version": "v0.5.138",
+  "installer_url": "https://github.com/Magicalshooter/OBSMisaTranslator/releases/download/v0.5.138/OBS_Misa_Translator_Setup_v0_5_138.exe",
   "download_url": "https://magicalshooter.github.io/OBSMisaTranslator/Updates.html",
-  "sha256": "67fde4d9ad82afd92f471b9f71ea8ab6f777e5edf5f08d4c477333a14fa038de",
-  "release_notes": "v0.5.136\n\n・8888をパチパチパチパチと読み上げるようにしました。絵文字を追加しました。絵文字追加システムを追加しました"
+  "sha256": "f842a82033ffe5f6d09f9f7c6cdacee4ac249fe4534d52f915000a7b0eb8a74c",
+  "release_notes": "v0.5.138\n\n・海外ユーザー向けの多言語読み上げ(TTS)を追加しました"
 }
